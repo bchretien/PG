@@ -52,11 +52,6 @@ struct ResultVisitor : public boost::static_visitor<>
     x = res.x;
   }
 
-  void operator()(const roboptim::ResultWithWarnings& res)
-  {
-    x = res.x;
-  }
-
   template <typename T>
   void operator()(const T& /* res */)
   {
